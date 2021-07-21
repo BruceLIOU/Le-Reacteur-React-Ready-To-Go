@@ -13,8 +13,8 @@ const Switch = ({
     } else {
       newSwitch1 = false;
     }
+
     setSwitch1(newSwitch1);
-    console.log(newSwitch1);
   };
 
   const handleClickOn2 = () => {
@@ -40,26 +40,44 @@ const Switch = ({
   return (
     <>
       <div className="btn-group">
-        <button className="btn on" onClick={handleClickOn1}>
+        <button
+          className={switch1 ? "btn on" : "btn off"}
+          onClick={handleClickOn1}
+        >
           ON
         </button>
-        <button className="btn off" onClick={handleClickOn1}>
+        <button
+          className={switch1 ? "btn on" : "btn off"}
+          onClick={handleClickOn1}
+        >
           OFF
         </button>
       </div>
       <div className="btn-group">
-        <button className="btn on" onClick={handleClickOn2}>
+        <button
+          className={switch2 ? "btn on" : "btn off"}
+          onClick={handleClickOn2}
+        >
           ON
         </button>
-        <button className="btn off" onClick={handleClickOn2}>
+        <button
+          className={switch2 ? "btn on" : "btn off"}
+          onClick={handleClickOn2}
+        >
           OFF
         </button>
       </div>
       <div className="btn-group">
-        <button className="btn on" onClick={handleClickOn3}>
+        <button
+          className={switch3 ? "btn on" : "btn off"}
+          onClick={handleClickOn3}
+        >
           ON
         </button>
-        <button className="btn off" onClick={handleClickOn3}>
+        <button
+          className={switch3 ? "btn on" : "btn off"}
+          onClick={handleClickOn3}
+        >
           OFF
         </button>
       </div>
