@@ -6,77 +6,46 @@ const Switch = ({
   setSwitch2,
   setSwitch3,
 }) => {
-  const handleClickOn1 = () => {
-    let newSwitch1 = switch1;
-    if (newSwitch1 === false) {
-      newSwitch1 = true;
-    } else {
-      newSwitch1 = false;
-    }
-
-    setSwitch1(newSwitch1);
-  };
-
-  const handleClickOn2 = () => {
-    let newSwitch2 = switch2;
-    if (newSwitch2 === false) {
-      newSwitch2 = true;
-    } else {
-      newSwitch2 = false;
-    }
-    setSwitch2(newSwitch2);
-  };
-
-  const handleClickOn3 = () => {
-    let newSwitch3 = switch3;
-    if (newSwitch3 === false) {
-      newSwitch3 = true;
-    } else {
-      newSwitch3 = false;
-    }
-    setSwitch3(newSwitch3);
-  };
-
   return (
     <>
       <div className="btn-group">
         <button
-          className={switch1 ? "btn on" : "btn off"}
-          onClick={handleClickOn1}
+          className={switch1 ? "btn off" : "btn on"}
+          onClick={() => setSwitch1(true)}
         >
           ON
         </button>
         <button
           className={switch1 ? "btn on" : "btn off"}
-          onClick={handleClickOn1}
+          onClick={() => setSwitch1(false)}
         >
           OFF
         </button>
       </div>
       <div className="btn-group">
         <button
-          className={switch2 ? "btn on" : "btn off"}
-          onClick={handleClickOn2}
+          className={switch2 ? "btn off" : "btn on"}
+          onClick={() => setSwitch2(true)}
         >
           ON
         </button>
         <button
           className={switch2 ? "btn on" : "btn off"}
-          onClick={handleClickOn2}
+          onClick={() => setSwitch2(false)}
         >
           OFF
         </button>
       </div>
       <div className="btn-group">
         <button
-          className={switch3 ? "btn on" : "btn off"}
-          onClick={handleClickOn3}
+          className={switch3 ? "btn off" : "btn on"}
+          onClick={() => setSwitch3(true)}
         >
           ON
         </button>
         <button
           className={switch3 ? "btn on" : "btn off"}
-          onClick={handleClickOn3}
+          onClick={() => setSwitch3(false)}
         >
           OFF
         </button>
