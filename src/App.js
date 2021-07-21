@@ -1,9 +1,27 @@
-import "./App.css";
+import { useState } from "react";
+import "./assets/css/App.css";
+import Header from "./components/Header";
+import Switch from "./components/Switch";
+import Result from "./components/Result";
+import Footer from "./components/Footer";
 
 function App() {
+  const [switch1, setSwitch1] = useState(false);
+  const [switch2, setSwitch2] = useState(false);
+  const [switch3, setSwitch3] = useState(false);
+
   return (
-    <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+    <div className="App">
+      <Header />
+      <div className="container">
+        <div className="col-1">
+          <Switch switch1={switch1} switch2={switch2} switch3={switch3} />
+        </div>
+        <div className="col-3">
+          <Result switch1={switch1} switch2={switch2} switch3={switch3} />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
