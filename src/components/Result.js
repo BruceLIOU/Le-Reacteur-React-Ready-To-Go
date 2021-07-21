@@ -2,7 +2,9 @@ const Result = ({ switch1, switch2, switch3 }) => {
   /* console.log(switch1, switch2, switch3); */
   return (
     <>
-      <button>{switch1 && switch2 && switch3 ? "Go !" : "No Way !"}</button>
+      <button className={!switch1 && !switch2 && !switch3 ? "no-way" : "go"}>
+        {!switch1 && !switch2 && !switch3 ? "No Way !" : "Go !"}
+      </button>
     </>
   );
 };

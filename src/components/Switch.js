@@ -14,6 +14,7 @@ const Switch = ({
       newSwitch1 = false;
     }
     setSwitch1(newSwitch1);
+    console.log(newSwitch1);
   };
 
   const handleClickOn2 = () => {

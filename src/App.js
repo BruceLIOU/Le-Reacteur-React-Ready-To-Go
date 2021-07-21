@@ -15,7 +15,14 @@ function App() {
       <Header />
       <div className="container">
         <div className="col-1">
-          <Switch switch1={switch1} switch2={switch2} switch3={switch3} />
+          <Switch
+            switch1={switch1}
+            switch2={switch2}
+            switch3={switch3}
+            setSwitch1={setSwitch1}
+            setSwitch2={setSwitch2}
+            setSwitch3={setSwitch3}
+          />
         </div>
         <div className="col-3">
           <Result switch1={switch1} switch2={switch2} switch3={switch3} />
